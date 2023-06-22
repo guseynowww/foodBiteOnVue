@@ -1,5 +1,5 @@
 <template>
-    <button class="header_button">Связаться с нами</button>
+    <button class="header_button"><slot></slot></button>
 </template>
 
 <script>

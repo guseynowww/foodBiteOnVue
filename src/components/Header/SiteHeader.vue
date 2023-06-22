@@ -7,7 +7,7 @@
                     <a href=""><li>Обратная связь</li></a>
                 </ul>
             </div>
-            <support-button></support-button>
+            <support-button>Связаться с нами</support-button>
         </header>
 </template>
 

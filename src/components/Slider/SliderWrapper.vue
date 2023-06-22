@@ -30,6 +30,15 @@
                     </slider-item>
                 </div>
             </div>
+            <ul class="list">
+                <li                 
+                    v-for="item in sliderCurrent"
+                    :key="item.id"
+                    @click="currentSlide"
+                >
+                    {{ item.current }}
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -43,6 +52,11 @@
         },
         props: {
             carousel_data: {
+                type: Array,
+                default: () => {}
+            },
+
+            sliderCurrent: {
                 type: Array,
                 default: () => {}
             }
@@ -143,5 +157,16 @@
         line-height: 28px;
         color: rgba(0, 0, 0, 0.5);
         margin-right: 10px;
+    }
+
+    .list {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        li {
+            cursor: pointer;
+        }
     }
 </style>

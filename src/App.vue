@@ -42,9 +42,12 @@
     <site-offer></site-offer>
     <slider-wrapper
       :carousel_data="SliderItem"
+      :sliderCurrent="SliderCurrent"
     >
-
     </slider-wrapper>
+    <hr class="line">
+    <form-to-call></form-to-call>
+    <hr class="line">
   </div>
 </template>
 <script>
@@ -54,6 +57,7 @@
   import SiteOffer from "./components/Offer/SiteOffer.vue";
   import SliderWrapper from "./components/Slider/SliderWrapper.vue";
   import SidePanel from "./components/SidePanel/SidePanel.vue";
+  import FormToCall from "./components/Form/FormToCall.vue"
 
 export default {
   components: {
@@ -62,7 +66,8 @@ export default {
     PromoTabs,
     SiteOffer,
     SliderWrapper,
-    SidePanel
+    SidePanel,
+    FormToCall
   },
   
   data() {
@@ -72,6 +77,13 @@ export default {
         {id: 2, img: '2.jpg'},
         {id: 3, img: '3.jpg'},
         {id: 4, img: '4.jpg'}
+      ],
+
+      SliderCurrent: [
+        {id: 1, current: 0},
+        {id: 2, current: 1},
+        {id: 3, current: 2},
+        {id: 4, current: 3},      
       ]
     }
   }
@@ -94,6 +106,6 @@ export default {
   .line {
     width: 250px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 80px;
   }
 </style>

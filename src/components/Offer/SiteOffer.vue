@@ -7,7 +7,7 @@
             </div>
         </div>
         
-        <support-button class="offer__btn"></support-button>
+        <support-button class="offer__btn">Связаться с нами</support-button>
     </div>
 </template>
 
